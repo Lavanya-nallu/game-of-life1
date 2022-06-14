@@ -1,5 +1,8 @@
-FROM 8897379201/ubuntu:v1
-MAINTAINER  lavanya8897379@gmail.com
-RUN         mkdir /usr1
-WORKDIR     /usr1 
+FROM tomcat:8.0-alpine
+LABEL maintainer="lavanyan889737@gmail.com"
+
+ADD target/hello-world-war-1.0.0.war /usr/local/tomcat/webapps/
+
+EXPOSE 8080
+CMD ["catalina.sh", "run"]
 
