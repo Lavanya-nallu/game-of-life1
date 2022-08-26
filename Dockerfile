@@ -7,4 +7,4 @@ ADD gameoflife-build/target/gameoflife-build-1.0-SNAPSHOT.jar  /usr/local/tomcat
 
 EXPOSE 8080
 
-CMD [“catalina.sh”, “run”]
+CMD [“/usr/local/tomcat/bin/catalina.sh”, “run”]
